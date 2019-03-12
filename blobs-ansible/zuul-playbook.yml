@@ -1,0 +1,18 @@
+---
+- hosts: blobsServers
+  remote_user: root
+  tasks:
+    - name: Create directory
+      file: 
+        path: /home/jars/blobs-zuul
+        state: directory
+    - name: Transferring sh file
+      copy:
+        src: /mnt/c/Users/28254/Documents/code/blobs/blobs-back/blobs-ansible/start-jar.sh
+        dest: /home/jars/
+    - name: Transferring jar file
+      copy: 
+        src: /mnt/c/Users/28254/Documents/code/blobs/blobs-back/blobs-zuul/target/blobs-zuul-0.0.1-SNAPSHOT.jar
+        dest: /home/jars/blobs-zuul
+    - name: Restart server
+      shell: sh /home/jars/start-jar.sh /home/jars/blobs-zuul/ blobs-zuul-0.0.1-SNAPSHOT.jar
