@@ -1,11 +1,11 @@
 # blobs-back
 
-# cloud-config 配置文件
-cloud-config的配置文件application.yml中包含账户密码信息，故未上传，其内容如下
+# blobs-config 配置文件
+blobs-config的配置文件application.yml中包含账户密码信息，故未上传，其内容如下
 <pre>
 spring:
   application:
-    name: cloud-config
+    name: blobs-config
   cloud:
     config:
       server:
@@ -15,7 +15,7 @@ spring:
           username: #GitHub 用户名
           password: #GitHub 密码
 server:
-  port: 12000
+  port: 8000
 eureka:
   client:
     service-url:
