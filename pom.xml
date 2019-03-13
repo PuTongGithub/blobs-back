@@ -36,6 +36,16 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>3.5.0</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.15</version>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -59,5 +69,6 @@
 		<module>blobs-eureka</module>
 		<module>blobs-config</module>
 		<module>blobs-zuul</module>
+		<module>blobs-user</module>
 	</modules>
 </project>
